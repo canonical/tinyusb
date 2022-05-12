@@ -491,6 +491,7 @@ void dcd_init (uint8_t rhport)
   TU_VERIFY(check_dwc2(dwc2), );
 
   dcd_disconnect(rhport);
+  dwc2->ghwcfg2_bm.hs_phy_type = HS_PHY_TYPE_ULPI;
 
   // max number of endpoints & total_fifo_size are:
   // hw_cfg2->num_dev_ep, hw_cfg2->total_fifo_size
