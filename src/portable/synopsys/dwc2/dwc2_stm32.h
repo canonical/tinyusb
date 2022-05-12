@@ -76,6 +76,7 @@ extern "C" {
 
   #define EP_MAX_HS       9
   #define EP_FIFO_SIZE_HS 4096
+  #undef USB_HS_PHYC
 
 #elif CFG_TUSB_MCU == OPT_MCU_STM32L4
   #include "stm32l4xx.h"

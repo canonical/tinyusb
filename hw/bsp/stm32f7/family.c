@@ -30,6 +30,8 @@
 #include "bsp/board_api.h"
 #include "board.h"
 
+#undef USB_HS_PHYC
+
 //--------------------------------------------------------------------+
 // Forward USB interrupt events to TinyUSB IRQ Handler
 //--------------------------------------------------------------------+
