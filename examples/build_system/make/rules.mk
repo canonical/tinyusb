@@ -112,8 +112,8 @@ flash-jlink: $(BUILD)/$(BOARD).jlink
 
 # --------------- stm32 cube programmer -----------------
 # Flash STM32 MCU using stlink with STM32 Cube Programmer CLI
-flash-stlink: $(BUILD)/$(PROJECT).elf
-	STM32_Programmer_CLI --connect port=swd --write $< --go
+flash-stlink: $(BUILD)/$(PROJECT).bin
+	st-flash --reset write $< 0x8000000
 
 # --------------- xfel -----------------
 $(BUILD)/$(PROJECT)-sunxi.bin: $(BUILD)/$(PROJECT).bin
