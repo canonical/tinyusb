@@ -194,8 +194,8 @@ flash-jlink: $(BUILD)/$(PROJECT).hex
 	$(JLINKEXE) -device $(JLINK_DEVICE) -if $(JLINK_IF) -JTAGConf -1,-1 -speed auto -CommandFile $(BUILD)/$(BOARD).jlink
 
 # Flash STM32 MCU using stlink with STM32 Cube Programmer CLI
-flash-stlink: $(BUILD)/$(PROJECT).elf
-	STM32_Programmer_CLI --connect port=swd --write $< --go
+flash-stlink: $(BUILD)/$(PROJECT).bin
+	st-flash --reset write $< 0x8000000
 
 $(BUILD)/$(PROJECT)-sunxi.bin: $(BUILD)/$(PROJECT).bin
 	$(PYTHON) $(TOP)/tools/mksunxi.py $< $@
