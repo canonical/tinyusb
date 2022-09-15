@@ -41,8 +41,13 @@ _Min_Stack_Size = 0x400; /* required amount of stack */
 /* Specify the memory areas */
 MEMORY
 {
+<<<<<<< HEAD:hw/bsp/stm32l0/boards/stm32l052dap52/STM32L052K8Ux_FLASH.ld
 FLASH (rx)      : ORIGIN = 0x8000000, LENGTH = 64K
 RAM (xrw)      : ORIGIN = 0x20000000, LENGTH = 8K
+=======
+RAM (xrw)      : ORIGIN = 0x20000000, LENGTH = 256K
+FLASH (rx)     : ORIGIN = DEFINED(_bootloader_) ? 0x90000000 :0x08000000, LENGTH = 2048K
+>>>>>>> bc7ea30fa (Add bootloader condition to linker script):hw/bsp/stm32f7/boards/stm32f750zapper/STM32F7xx_FLASH.ld
 }
 
 /* Define output sections */
