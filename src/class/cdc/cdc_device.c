@@ -305,7 +305,7 @@ uint16_t cdcd_open(uint8_t rhport, tusb_desc_interface_t const * itf_desc, uint1
     // notification endpoint
     tusb_desc_endpoint_t const * desc_ep = (tusb_desc_endpoint_t const *) p_desc;
 
-    TU_ASSERT( usbd_edpt_open(rhport, desc_ep), 0 );
+//    TU_ASSERT( usbd_edpt_open(rhport, desc_ep), 0 );
     p_cdc->ep_notif = desc_ep->bEndpointAddress;
 
     drv_len += tu_desc_len(p_desc);
