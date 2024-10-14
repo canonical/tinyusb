@@ -1,3 +1,4 @@
+MCU_VARIANT = stm32f207xx
 ST_FAMILY = f2
 DEPS_SUBMODULES += lib/CMSIS_5 hw/mcu/st/cmsis_device_$(ST_FAMILY) hw/mcu/st/stm32$(ST_FAMILY)xx_hal_driver
 

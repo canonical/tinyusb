@@ -1,3 +1,4 @@
+MCU_VARIANT = stm32f750xx
 PORT ?= 0
 SPEED ?= high
 
