@@ -52,6 +52,9 @@ void OTG_HS_IRQHandler(void) {
 UART_HandleTypeDef UartHandle;
 
 void board_init(void) {
+  SCB_EnableICache();
+  SCB_EnableDCache();
+
   board_clock_init();
 
   // Enable All GPIOs clocks
