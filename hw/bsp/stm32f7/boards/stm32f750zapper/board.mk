@@ -6,8 +6,8 @@ CFLAGS += \
   -DSTM32F750xx \
   -DHSE_VALUE=8000000 \
 
-LD_FILE = $(BOARD_PATH)/STM32F7xx_FLASH.ld
-SRC_S += $(ST_CMSIS)/Source/Templates/gcc/startup_stm32f750xx.s
+LD_FILE = $(BOARD_PATH)/STM32F7xx_SRAM_FLASH.ld
+SRC_S += $(BOARD_PATH)/startup_stm32f750xx.s
 
 # flash target using on-board stlink
 flash: flash-stlink
